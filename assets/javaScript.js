@@ -37,7 +37,7 @@ function checkUserPass( user, pass){
 
         access = true    
 
-        window.location.href = "WebCv/html/indexRework.html"
+        window.location.href = "WebPage/html/indexRework.html"
         
     }else{
         alert('ERROR')
