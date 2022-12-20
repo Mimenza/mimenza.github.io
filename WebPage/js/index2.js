@@ -13,7 +13,7 @@ var currentDotPosition = 1
 if (localStorage.getItem('access') == false  ||  localStorage.getItem('access') == null) {
     
     /*  window.location.href = "../../index.html"  */
-    document.getElementById('html').classList.add('backpurple')
+
 } else{
     document.getElementById('FullBody').classList.remove('hidden')
     
