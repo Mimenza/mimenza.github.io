@@ -12,10 +12,11 @@ var currentDotPosition = 1
 /*VERIFY IF WE HAVE ACCESS*/
 if (localStorage.getItem('access') == false  ||  localStorage.getItem('access') == null) {
     
-     window.location.href = "../../index.html" 
-
+    /*  window.location.href = "../../index.html"  */
+    document.getElementById('html').classList.add('backpurple')
 } else{
-    document.getElementById('FullBody').classList.remove('hidden-display')
+    document.getElementById('FullBody').classList.remove('hidden')
+    
 }
 
 
