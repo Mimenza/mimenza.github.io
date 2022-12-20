@@ -1,23 +1,21 @@
-/*  import { access } from "../../assets/javaScript"; 
+var access = sessionStorage.getItem('accessKey')
 
- console.log(access)  */
- 
-
- /*VARIABLES*/
+/*VARIABLES*/
 const position = [];
 position.push('SideNav', 'About', 'Timeline', 'Contact');
 var currentPosition = 0
 var currentDotPosition = 1
 
 /*VERIFY IF WE HAVE ACCESS*/
-if (localStorage.getItem('access') == false  ||  localStorage.getItem('access') == null) {
-    
-      window.location.href = "../../index.html"  
+if (access == 1) {
 
-} else{
     document.getElementById('FullBody').classList.remove('hidden')
-    
-}
+
+} else {
+
+    window.location.href = "../../index.html"
+
+} 
 
 
 (function ($) {
@@ -298,4 +296,11 @@ function calculateCurrentPoint(position) {
     }
 
     currentDotPosition = position
+}
+
+
+function clearStorage() {
+    console.log('exit')
+    sessionStorage.clear()
+    window.location.href = "../../index.html"
 }
