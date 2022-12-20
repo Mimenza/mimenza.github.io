@@ -12,7 +12,7 @@ var currentDotPosition = 1
 /*VERIFY IF WE HAVE ACCESS*/
 if (localStorage.getItem('access') == false  ||  localStorage.getItem('access') == null) {
     
-    window.location.href = "../../index.html"
+    
 
 } 
 

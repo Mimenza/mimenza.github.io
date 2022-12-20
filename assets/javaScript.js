@@ -1,4 +1,3 @@
-/*  export var access = false   */
 
 (function ($) {
 
