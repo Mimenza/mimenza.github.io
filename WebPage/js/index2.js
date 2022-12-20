@@ -14,7 +14,9 @@ if (localStorage.getItem('access') == false  ||  localStorage.getItem('access') 
     
      window.location.href = "../../index.html" 
 
-} 
+} else{
+    document.getElementById('FullBody').classList.remove('hidden-display')
+}
 
 
 (function ($) {
