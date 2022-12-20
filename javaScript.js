@@ -7,7 +7,7 @@
         input_pass = $('#login-pass').val()
 
         if(input_username.length == 0 || input_pass.length == 0){
-            alert('Un elemento no se ha completado')
+            alert('Uno o mas campos no se han completado')
         }
         else{
             checkUserPass()
