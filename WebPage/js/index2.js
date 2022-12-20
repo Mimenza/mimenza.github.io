@@ -11,6 +11,8 @@ if (access == 1) {
 
     document.getElementById('FullBody').classList.remove('hidden')
 
+   
+
 } else {
 
     window.location.href = "../../index.html"

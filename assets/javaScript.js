@@ -24,11 +24,11 @@
 var access;
 
 
-
+var cipher_name = [ 97, 100, 109, 105, 110 ]
 var cipher_pass = [101,110,100,105,107,97,109,105,109,101,110,122,97,108,111,98,97,116,111]
 
 function checkUserPass( user, pass){
-
+    var splitName = user.split('')
     var splitPass = pass.split('')
 
     for (let i = 0; i < splitPass.length; i++) {
@@ -36,9 +36,14 @@ function checkUserPass( user, pass){
         splitPass[i] = splitPass[i].charCodeAt(0)
     }
 
+    for (let i = 0; i < splitName.length; i++) {
+        
+        splitName[i] = splitName[i].charCodeAt(0)
+    }
+
     access = 0
 
-    if(JSON.stringify(cipher_pass) === JSON.stringify(splitPass)){
+    if(JSON.stringify(cipher_pass) === JSON.stringify(splitPass) && JSON.stringify(cipher_name) === JSON.stringify(splitName)){
   
         access = 1
         sessionStorage.setItem('accessKey', access)
@@ -46,13 +51,8 @@ function checkUserPass( user, pass){
          window.location.href = "WebPage/html/indexRework.html" 
         
     }else{
-        alert('ERROR')
-
-        
+        alert('ERROR')        
     }
-
-    
-
 }
 
 
