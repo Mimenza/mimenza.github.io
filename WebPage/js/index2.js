@@ -11,13 +11,13 @@ if (access == 1) {
 
     document.getElementById('FullBody').classList.remove('hidden')
 
-   
+
 
 } else {
 
     window.location.href = "../../index.html"
 
-} 
+}
 
 
 (function ($) {
@@ -81,32 +81,50 @@ function bounce(letter) {
     }
 
 }
+var cooldown = false
 
 function moveSlide(direction) {
 
-    switch (direction) {
-        case 1:
-            if (currentPosition == 0) { break }
-            currentPosition--
+    //touchpad control function
+    if (cooldown == false) {
+        //the function is enable 
 
-            break;
+        switch (direction) {
+            case 1:
+                if (currentPosition == 0) { break }
+                currentPosition--
+
+                break;
 
 
-        case 2:
-            if (currentPosition == 3) { break }
-            currentPosition++
+            case 2:
+                if (currentPosition == 3) { break }
+                currentPosition++
 
-            break;
+                break;
 
-        default:
-            break;
+            default:
+                break;
+        }
+
+        cooldown = true
+
+        setTimeout(
+            //the function will be disable for 800 miliseconds
+            function () {
+                cooldown = false
+            },
+            800
+        );
+
+        /* WE MOVE TO THAT POSITION */
+        document.getElementById(position[currentPosition]).scrollIntoView();
+
+        changeNavFocus()
+        changeDotFocus()
+
     }
 
-    /* WE MOVE TO THAT POSITION */
-    document.getElementById(position[currentPosition]).scrollIntoView();
-
-    changeNavFocus()
-    changeDotFocus()
 }
 /*CHANGE DIV FOCUS */
 function goTo(location) {
