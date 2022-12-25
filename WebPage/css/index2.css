@@ -30,14 +30,16 @@ html {
     --accent: #8167a9;
     --color1: #1f2029;
     --color2: #14151a;
-    --letter: #ffffff;
+    --letter1: #ffffff;
+    --letter2: #ffffff;
 }
 
 :root.pink {
     --accent: #f44c7f;
     --color1: #333a45;
-    --color2: #939eae;
-    --letter: #ffffff;
+    --color2: #333a45;;
+    --letter1:#939eae;
+    --letter2:#ffffff;
 }
 
 
@@ -94,7 +96,7 @@ html {
     height: 17px;
     background-image: none;
     position: relative;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--letter1);
     transition: all 300ms linear;
 }
 
@@ -103,7 +105,7 @@ html {
     width: 24px;
     position: absolute;
     height: 1px;
-    background-color: white;
+    background-color: var(--letter1);
     top: 0;
     left: 0;
     content: '';
@@ -129,7 +131,7 @@ html {
 
 /*--------------------------------------------------------------*/
 .nav-link {
-    color: white !important;
+    color: var(--letter1) !important;
     font-weight: 500;
     transition: all 200ms linear;
     position: relative;
@@ -496,6 +498,7 @@ h1 span {
 .social {
     position: fixed;
     top: 200px;
+    z-index: 3;
 }
 
 .social a {
@@ -543,11 +546,12 @@ h1 span {
     position: fixed;
     top: 50vh;
     right: 50px;
+    z-index: 3;
 
 }
 
 .progressDots i {
-    color: white;
+    color: var(--letter1);
     opacity: 0.5;
 
 }
@@ -564,7 +568,7 @@ h1 span {
 
 .circle-Non-Active {
     transform: scale(1);
-    color: white;
+    color: var(--letter1);
 }
 
 .circle-Active {
@@ -632,7 +636,7 @@ h4 {
 
 .presentation button:hover {
     transform: translate(0, -7px);
-    color: white;
+    color: var(--letter1);
 
 }
 
@@ -688,7 +692,7 @@ h4 {
 .mouse {
     width: 50px;
     height: 90px;
-    border: 3px solid white;
+    border: 3px solid var(--letter1);
     border-radius: 60px;
     position: relative;
     margin: auto;
@@ -702,7 +706,7 @@ h4 {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
+    background-color: var(--letter1);
     border-radius: 50%;
     opacity: 1;
     animation: wheel 2s infinite;
@@ -816,12 +820,13 @@ h4 {
 
 .about-me p {
     display: flex;
-    color: white;
+    color: var(--letter1);
 
 }
 
 .about-me h3 {
     margin-bottom: 40px;
+    color:var(--letter2)
 }
 
 .about-me .col-skills {
@@ -852,7 +857,7 @@ h4 {
 
 .about-me .col-info button:hover {
     transform: translate(0, -7px);
-    color: white;
+    color: var(--letter1);
 
 }
 
@@ -922,7 +927,7 @@ h4 {
 
 .line .dot-timeline {
     background-color: var(--color1);
-    border: 3px solid white;
+    border: 3px solid var(--letter1);
     height: 38px;
     width: 38px;
     display: inline-block;
@@ -941,7 +946,7 @@ h4 {
 .wrap-timeline::before, .wrap-timeline::after{
     content: '';
     width: 3em;
-    border-bottom: 3px solid white ;
+    border-bottom: 3px solid var(--letter1) ;
     position: absolute;
     top: 47%
 }
@@ -961,7 +966,7 @@ h4 {
 -----------------------------------*/
 
 .dot-active {
-    background-color: white !important;
+    background-color: var(--letter1) !important;
     /*---scale: 1.2; ---------*/
 
 }
@@ -980,6 +985,7 @@ h4 {
     overflow: hidden;
     background-color: var(--color2);
     border-radius: 10px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
 
 }
 
@@ -1093,7 +1099,7 @@ footer {
 .footer-distributed p.footer-links {
     font-size: 18px;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--letter);
     margin: 0 0 10px;
     padding: 0;
     transition: ease .25s;
@@ -1133,7 +1139,7 @@ footer {
     background-color: #33383b;
     border-radius: 2px;
     font-size: 20px;
-    color: #ffffff;
+    color: var(--letter);
     text-align: center;
     line-height: 35px;
     margin-left: 3px;
