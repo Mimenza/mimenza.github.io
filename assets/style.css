@@ -1,11 +1,32 @@
+/* CSS COLOR THEME */
+:root,
+:root.purple {
+    --accent: #8167a9;
+    --color1: #1f2029;
+    --color2: #14151a;
+    --letter1: #ffffff;
+    --letter2: #ffffff;
+    --accent2: #a58fc7;
+}
+
+:root.pink {
+    --accent: #f44c7f;
+    --color1: #333a45;
+    --color2: #333a45;;
+    --letter1:#939eae;
+    --letter2:#ffffff;
+    --accent2: #99183e;
+}
+
+
 body {
-    background-color: #1f2029;
+    background-color: var(--color1);
     font-family: "Asap", sans-serif;
   }
   
   .login {
     overflow: hidden;
-    background-color: #14151a;
+    background-color: var(--color2);
     padding: 40px 30px 30px 30px;
     border-radius: 10px;
     position: absolute;
@@ -36,7 +57,7 @@ body {
   .login::before {
     left: 40%;
     bottom: -130%;
-    background-color:#c59fff;
+    background-color: var(--accent2);
     -webkit-animation: wawes 6s infinite linear;
     -moz-animation: wawes 6s infinite linear;
     animation: wawes 6s infinite linear;
@@ -44,7 +65,7 @@ body {
   .login::after {
     left: 35%;
     bottom: -125%;
-    background-color:#8167a9;
+    background-color:var(--accent);
     -webkit-animation: wawes 7s infinite;
     -moz-animation: wawes 7s infinite;
     animation: wawes 7s infinite;
@@ -63,7 +84,7 @@ body {
   .login > button {
     font-family: "Asap", sans-serif;
     cursor: pointer;
-    color: #fff;
+    color: white;
     font-size: 16px;
     text-transform: uppercase;
     width: 80px;
@@ -72,13 +93,13 @@ body {
     margin-top: 10px;
     margin-left: -5px;
     border-radius: 5px;
-    background-color: #8167a9;
+    background-color: var(--accent);
     -webkit-transition: background-color 300ms;
     -moz-transition: background-color 300ms;
     transition: background-color 300ms;
   }
   .login > button:hover {
-    background-color: #8167a9;
+    background-color: var(--accent);
   }
   
   @-webkit-keyframes wawes {
