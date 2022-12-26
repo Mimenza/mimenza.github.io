@@ -1068,6 +1068,20 @@ h4 {
     transition: all 265ms ease-in;
 }
 
+.social-container .social-mail{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.social-container .social-mail li h5{
+    cursor: pointer;
+}
+
+.social-container .social-mail li h5:hover{
+color: var(--accent);
+
+}
 /*-----------------------FOOTER------------------------------------------------*/
 
 footer {

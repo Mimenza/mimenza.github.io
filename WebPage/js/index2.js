@@ -1,5 +1,7 @@
 var access = sessionStorage.getItem('accessKey')
 
+
+
 /*VARIABLES*/
 const position = [];
 position.push('SideNav', 'About', 'Timeline', 'Contact');
@@ -318,9 +320,21 @@ function calculateCurrentPoint(position) {
     currentDotPosition = position
 }
 
-
+/*CLEAR SESSION STORAGE*/
 function clearStorage() {
     console.log('exit')
     sessionStorage.clear()
     window.location.href = "../../index.html"
+}
+
+/* COPY LINK */
+function copyLink(){
+    var copyText = document.getElementById("social-mail-copy").textContent
+        
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText);
+  
+    // Alert the copied text
+    alert("El correo se ha copiado!");
+
 }
