@@ -3,23 +3,22 @@ var access = sessionStorage.getItem('accessKey')
 
 
 /*VARIABLES*/
-const position = [];
+const position = [];                                        /*DIV POSITIONS*/
 position.push('SideNav', 'About', 'Timeline', 'Contact');
-var currentPosition = 0
-var currentDotPosition = 1
+var currentPosition = 0                                     /*CURRENT DIV POSITION*/
+var currentDotPosition = 1                                  /*CURRENT SIDE DOT POSITION*/
 
 /*VERIFY IF WE HAVE ACCESS*/
 if (access == 1) {
 
     document.getElementById('FullBody').classList.remove('hidden')
 
-
-
 } else {
 
     window.location.href = "../../index.html"
 
 }
+
 
 
 (function ($) {
@@ -61,6 +60,11 @@ if (access == 1) {
         e.preventDefault(); // prevent the default action (scroll / move caret)
     };
 
+    /* CALCULATE CURRENT PAGE WIDTH */
+    function currentPageWidth() {
+        return $(window).width()
+    }
+    widthFunction = currentPageWidth
 
 })(jQuery);
 
@@ -83,8 +87,11 @@ function bounce(letter) {
     }
 
 }
-var cooldown = false
+var cooldown = false                /*SCROLL COOLDOWN*/
 
+var widthFunction                   /* JS WIDH FUNCTION VARIABLE*/
+
+/*  SCROLL MOUSE AND KEYS DIRECTION*/
 function moveSlide(direction) {
 
     //touchpad control function
@@ -128,6 +135,7 @@ function moveSlide(direction) {
     }
 
 }
+
 /*CHANGE DIV FOCUS */
 function goTo(location) {
 
@@ -137,7 +145,8 @@ function goTo(location) {
     changeNavFocus()
     changeDotFocus()
 }
-/*CHANGE NAV FOCUS */
+
+/*CHANGE TOP NAV FOCUS */
 function changeNavFocus() {
 
     /* CHANGE NAV BAR FOCUS*/
@@ -150,7 +159,8 @@ function changeNavFocus() {
 
     navbarCurrent.classList.add('active')
 }
-/*TIMELINE DOTS FOCUS */
+
+/*CHANGE SIDE DOTS FOCUS */
 function changeDotFocus() {
 
     /* CHANGE DOT  FOCUS*/
@@ -203,8 +213,8 @@ function dotClick(position, dotId) {
         }
     }
 
-    var date = document.querySelectorAll("[data-timelineDotTop='dateTop" + position + "']")
-    var exitDate = document.querySelectorAll("[data-timelineDotBottom='dateBottom" + position + "']")
+    var date = document.querySelectorAll("[data-timelineDotTop='dateTop" + position + "']")             /*TOP    DATE*/
+    var exitDate = document.querySelectorAll("[data-timelineDotBottom='dateBottom" + position + "']")   /*BOTTOM DATE*/
 
     date[0].classList.remove("hidden")
 
@@ -265,11 +275,20 @@ function exitAnimation(date, direction) {
 /*CALCULATE THE CURRENT DOT TIMELINE DIRECTION*/
 function calculateCurrentPoint(position) {
 
-    var currentText = document.getElementsByClassName("text-" + currentDotPosition)
-    var newText = document.getElementsByClassName("text-" + position)
+    var currentText = document.getElementsByClassName("text-" + currentDotPosition)     /* displaying text*/
+    var newText = document.getElementsByClassName("text-" + position)                   /* upcoming text*/
+
+    /* CALCULATE PAGE WIDTH*/
+    if (widthFunction() < 1000) {
+        /* PAGE IS PHONE MODE*/
+
+    } else {
+        /* PAGE IS COMPUTER MODE*/
+
+    }
+
 
     if ((position) > currentDotPosition) {
-
         /* right */
 
         currentText[0].classList.add('slide-out-left')
@@ -317,7 +336,8 @@ function calculateCurrentPoint(position) {
         }, 2000);
     }
 
-    currentDotPosition = position
+
+    currentDotPosition = position       /*UPDATE THE DOT POSITION*/
 }
 
 /*CLEAR SESSION STORAGE*/
@@ -328,13 +348,30 @@ function clearStorage() {
 }
 
 /* COPY LINK */
-function copyLink(){
+function copyLink() {
     var copyText = document.getElementById("social-mail-copy").textContent
-        
-     // Copy the text inside the text field
+
+    // Copy the text inside the text field
     navigator.clipboard.writeText(copyText);
-  
+
     // Alert the copied text
     alert("El correo se ha copiado!");
 
 }
+
+/* TYPEWRITING 
+var i = 0;
+var txt = 'ENDIKA';  The text 
+var speed = 50; The speed/duration of the effect in milliseconds 
+function typeWriter() {
+    console.log(i , txt.length-1)
+
+    if (i < txt.length) {
+        document.getElementById("NameId").innerHTML += '<span>' + txt.charAt(i) + '</span>';
+        i++;
+
+        setTimeout(typeWriter, speed);
+    }
+    
+
+}*/
