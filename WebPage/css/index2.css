@@ -937,13 +937,13 @@ h4 {
 
 }
 
-/*-----------------------------------
+/*----------------------------------- -----------------------------------*/
 
-.wrap-timeline{
+.timeline .wrap-timeline{
     position: relative !important
 }
 
-.wrap-timeline::before, .wrap-timeline::after{
+.timeline .wrap-timeline::before, .wrap-timeline::after{
     content: '';
     width: 3em;
     border-bottom: 3px solid var(--letter1) ;
@@ -959,11 +959,11 @@ h4 {
     right: 110%;
 }
 
-:first-of-type::after, :last-of-type::before{
+.timeline :first-of-type::after, .timeline :last-of-type::before{
     display: none;
 }
 
------------------------------------*/
+
 
 .dot-active {
     background-color: var(--letter1) !important;
@@ -972,7 +972,8 @@ h4 {
 }
 
 .line .dot-timeline:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+   /*  background-color: rgba(255, 255, 255, 0.3); */
+   background-color: var(--accent);
 
 }
 
