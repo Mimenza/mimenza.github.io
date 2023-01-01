@@ -17,12 +17,14 @@ body {
     overflow: hidden;
     overflow-x: hidden;
     transition: all 200ms linear;
+
 }
 
 
 html {
     scroll-behavior: smooth;
 }
+
 
 /* CSS COLOR THEME */
 :root,
@@ -692,7 +694,7 @@ h4 {
 .field {
     width: 100%;
     position: absolute;
-    bottom: 100px;
+    bottom: 5%;
 }
 
 .mouse {
@@ -1013,12 +1015,14 @@ h4 {
 .contact-msg {
     display: block;
     margin: auto;
-    width: 800px;
-    margin-bottom: 70px;
+    max-width: 800px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-bottom: 20px;
 }
 
 .social-container {
-    width: 400px;
+    max-width: 400px;
     margin: auto;
     text-align: center;
 }
@@ -1219,10 +1223,13 @@ footer {
     }
 
     /*contact btn disapears*/
-    .about button, .col-skills h3 {
+    .about button,
+    .col-skills h3 {
 
         display: none;
     }
+
+
 
 }
 
@@ -1235,9 +1242,49 @@ footer {
 }
 
 
-@media(max-width: 1000px){
+@media(max-width: 1000px) {
 
-    .about-me h5{
+    .about-me h5 {
         margin-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+@media(max-width: 438px) {
+
+    .social-icons li {
+        width: 100%;
+
+    }
+
+    .social-icons i {
+        left: 48%
     }
 }
+
+
+/* ERROR ---> NAV SIDENAV & DOTS NOT FIXED 
+@media(max-width: 1920px) {
+
+
+    html {
+        -moz-transform: scale(0.8, 0.8);
+        -ms-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+
+        width: 125%;
+        transform-origin: 0 0;
+    }
+
+    .presentation,
+    .about,
+    .timeline,
+    .contact {
+
+        height: 125vh;
+    }
+
+}*/

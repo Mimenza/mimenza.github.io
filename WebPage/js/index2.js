@@ -4,7 +4,7 @@ var access = sessionStorage.getItem('accessKey')
 
 /*VARIABLES*/
 const position = [];                                        /*DIV POSITIONS*/
-position.push('SideNav', 'About', 'Timeline', 'Contact');
+position.push('Top', 'About', 'Timeline', 'Contact');
 var currentPosition = 0                                     /*CURRENT DIV POSITION*/
 var currentDotPosition = 1                                  /*CURRENT SIDE DOT POSITION*/
 
