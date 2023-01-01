@@ -37,9 +37,10 @@ html {
 :root.pink {
     --accent: #f44c7f;
     --color1: #333a45;
-    --color2: #333a45;;
-    --letter1:#939eae;
-    --letter2:#ffffff;
+    --color2: #333a45;
+    ;
+    --letter1: #939eae;
+    --letter2: #ffffff;
 }
 
 
@@ -595,6 +596,10 @@ h1 span {
 
 /*-----------------------PRESENTATION -------------------------------------------------*/
 
+.breakName {
+    display: none;
+}
+
 .presentation img {
     border-radius: 50%;
     margin-bottom: 30px;
@@ -618,6 +623,7 @@ h1 span {
 .presentation h1,
 h4 {
     margin-bottom: 50px;
+    min-width: 250px;
 }
 
 .presentation h1 span {
@@ -826,7 +832,7 @@ h4 {
 
 .about-me h3 {
     margin-bottom: 40px;
-    color:var(--letter2)
+    color: var(--letter2)
 }
 
 .about-me .col-skills {
@@ -939,27 +945,29 @@ h4 {
 
 /*----------------------------------- -----------------------------------*/
 
-.timeline .wrap-timeline{
+.timeline .wrap-timeline {
     position: relative !important
 }
 
-.timeline .wrap-timeline::before, .wrap-timeline::after{
+.timeline .wrap-timeline::before,
+.wrap-timeline::after {
     content: '';
     width: 3em;
-    border-bottom: 3px solid var(--letter1) ;
+    border-bottom: 3px solid var(--letter1);
     position: absolute;
     top: 47%
 }
 
-::before{
+::before {
     left: 110%;
 }
 
-::after{
+::after {
     right: 110%;
 }
 
-.timeline :first-of-type::after, .timeline :last-of-type::before{
+.timeline :first-of-type::after,
+.timeline :last-of-type::before {
     display: none;
 }
 
@@ -972,8 +980,8 @@ h4 {
 }
 
 .line .dot-timeline:hover {
-   /*  background-color: rgba(255, 255, 255, 0.3); */
-   background-color: var(--accent);
+    /*  background-color: rgba(255, 255, 255, 0.3); */
+    background-color: var(--accent);
 
 }
 
@@ -1069,20 +1077,21 @@ h4 {
     transition: all 265ms ease-in;
 }
 
-.social-container .social-mail{
+.social-container .social-mail {
     list-style-type: none;
     text-align: center;
     padding: 0;
 }
 
-.social-container .social-mail li h5{
+.social-container .social-mail li h5 {
     cursor: pointer;
 }
 
-.social-container .social-mail li h5:hover{
-color: var(--accent);
+.social-container .social-mail li h5:hover {
+    color: var(--accent);
 
 }
+
 /*-----------------------FOOTER------------------------------------------------*/
 
 footer {
@@ -1186,5 +1195,35 @@ footer {
 
     .footer-distributed .footer-left p.footer-links {
         line-height: 1.8;
+    }
+}
+
+@media (max-width: 851px) {
+
+    .progressNav,
+    .sideNav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /*Move endika to the bottom*/
+    .breakName {
+        display: block;
+    }
+
+    /*mouse icon to the bottom */
+    .field {
+        bottom: 20px;
+    }
+
+}
+
+@media (max-width: 462px) {
+
+    /*mouse icon to the bottom */
+    .field {
+        bottom: -6vh;
     }
 }
