@@ -806,7 +806,7 @@ h4 {
 
 .about-me {
     margin: auto;
-    width: 1200px;
+    max-width: 1200px;
 
     height: auto;
     padding: 10px;
@@ -1218,6 +1218,12 @@ footer {
         bottom: 20px;
     }
 
+    /*contact btn disapears*/
+    .about button, .col-skills h3 {
+
+        display: none;
+    }
+
 }
 
 @media (max-width: 462px) {
@@ -1225,5 +1231,13 @@ footer {
     /*mouse icon to the bottom */
     .field {
         bottom: -6vh;
+    }
+}
+
+
+@media(max-width: 1000px){
+
+    .about-me h5{
+        margin-bottom: 40px;
     }
 }
