@@ -713,6 +713,7 @@ h1 span {
 }
 
 .presentation h1,
+.presentation
 h4 {
     margin-bottom: 50px;
     min-width: 250px;
@@ -988,6 +989,10 @@ h4 {
     text-align: center;
     color: var(--accent);
     margin-bottom: 40px;
+}
+
+.timeline h4 {
+   margin-bottom: 40px;
 }
 
 .timeline .line {
@@ -1341,11 +1346,16 @@ footer {
     .timeline-text {
         height: 330px;
         max-height: 1000px;
+        padding: 20px;
     }
 
-    .timeline-dot-top {
+    .timeline-dot-top, .timeline-dot-bottom {
         display: none;
     }
+
+    .timeline h4 {
+        margin-bottom: 20px;
+     }
 }
 
 @media (max-width: 768px) {
