@@ -279,62 +279,113 @@ function calculateCurrentPoint(position) {
     var newText = document.getElementsByClassName("text-" + position)                   /* upcoming text*/
 
     /* CALCULATE PAGE WIDTH*/
-    if (widthFunction() < 1000) {
+    if (widthFunction() < 851) {
         /* PAGE IS PHONE MODE*/
+
+        if ((position) < currentDotPosition) {
+            /* TOP */
+           
+            currentText[0].classList.add('slide-out-bottom-1')        /* sale el texto de ahora*/
+    
+            setTimeout(() => {
+                currentText[0].classList.add('hidden-display')      /* desaparece el texto de ahora  */
+    
+            }, 500);
+    
+            setTimeout(() => {
+                newText[0].classList.remove('hidden-display')       /*aparece el nuevo texto */
+                newText[0].classList.add('slide-in-top-1')            /*entra el nuevo texto */
+    
+            }, 500);
+    
+            /*WE DELETE THE STYLES*/
+            setTimeout(() => {
+                currentText[0].classList.remove('slide-out-bottom-1')    
+                newText[0].classList.remove('slide-in-top-1')
+    
+            }, 2000);
+    
+        }
+        else {
+
+            /* BOTTOM */
+
+            currentText[0].classList.add('slide-out-top-1')        /* sale el texto de ahora*/
+    
+            setTimeout(() => {
+                currentText[0].classList.add('hidden-display')      /* desaparece el texto de ahora  */
+    
+            }, 500);
+    
+            setTimeout(() => {
+                newText[0].classList.remove('hidden-display')       /*aparece el nuevo texto */
+                newText[0].classList.add('slide-in-bottom-1')            /*entra el nuevo texto */
+    
+            }, 500);
+    
+            /*WE DELETE THE STYLES*/
+            setTimeout(() => {
+                currentText[0].classList.remove('slide-out-top-1')    
+                newText[0].classList.remove('slide-in-bottom-1')
+    
+            }, 2000);
+        }
 
     } else {
         /* PAGE IS COMPUTER MODE*/
 
+        if ((position) > currentDotPosition) {
+            /* right */
+    
+            currentText[0].classList.add('slide-out-left')
+    
+            setTimeout(() => {
+                currentText[0].classList.add('hidden-display')
+    
+            }, 500);
+    
+            setTimeout(() => {
+                newText[0].classList.remove('hidden-display')
+                newText[0].classList.add('slide-in-right')
+    
+            }, 500);
+    
+            /*WE DELETE THE STYLES*/
+            setTimeout(() => {
+                currentText[0].classList.remove('slide-out-left')
+                newText[0].classList.remove('slide-in-right')
+    
+            }, 2000);
+    
+        }
+        else {
+            /* left */
+    
+            currentText[0].classList.add('slide-out-right')
+    
+            setTimeout(() => {
+                currentText[0].classList.add('hidden-display')
+    
+            }, 500);
+    
+            setTimeout(() => {
+                newText[0].classList.remove('hidden-display')
+                newText[0].classList.add('slide-in-left')
+    
+            }, 500);
+    
+            /*WE DELETE THE STYLES*/
+            setTimeout(() => {
+                currentText[0].classList.remove('slide-out-right')
+                newText[0].classList.remove('slide-in-left')
+    
+            }, 2000);
+        }
+
     }
 
 
-    if ((position) > currentDotPosition) {
-        /* right */
-
-        currentText[0].classList.add('slide-out-left')
-
-        setTimeout(() => {
-            currentText[0].classList.add('hidden-display')
-
-        }, 500);
-
-        setTimeout(() => {
-            newText[0].classList.remove('hidden-display')
-            newText[0].classList.add('slide-in-right')
-
-        }, 500);
-
-        /*WE DELETE THE STYLES*/
-        setTimeout(() => {
-            currentText[0].classList.remove('slide-out-left')
-            newText[0].classList.remove('slide-in-right')
-
-        }, 2000);
-
-    }
-    else {
-        /* left */
-
-        currentText[0].classList.add('slide-out-right')
-
-        setTimeout(() => {
-            currentText[0].classList.add('hidden-display')
-
-        }, 500);
-
-        setTimeout(() => {
-            newText[0].classList.remove('hidden-display')
-            newText[0].classList.add('slide-in-left')
-
-        }, 500);
-
-        /*WE DELETE THE STYLES*/
-        setTimeout(() => {
-            currentText[0].classList.remove('slide-out-right')
-            newText[0].classList.remove('slide-in-left')
-
-        }, 2000);
-    }
+    
 
 
     currentDotPosition = position       /*UPDATE THE DOT POSITION*/
