@@ -14,7 +14,7 @@ body {
     background-repeat: repeat;
     background-size: 7%;
     background-color: var(--color1);
-    overflow: hidden;
+    
     overflow-x: hidden;
     transition: all 200ms linear;
 
@@ -1408,6 +1408,23 @@ footer {
 }
 
 @media(max-width: 438px) {
+
+    html{
+
+        overflow:auto;
+    }
+
+    .presentation{
+        margin-top: 10vh;
+    }
+
+    .field{
+        visibility: hidden;
+    }
+    
+    .about, .contact {
+        height: 120vh;
+    }
 
     .social-icons li {
         width: 100%;
