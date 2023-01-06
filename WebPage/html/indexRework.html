@@ -28,7 +28,7 @@
                             <H2>Endika</H2>
                         </a>
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -38,20 +38,20 @@
                             <ul class="navbar-nav ml-auto py-4 py-md-0">
 
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active" data-location="Top">
-                                    <a class="nav-link" onclick="goTo(0)">Home</a>
+                                    <a class="nav-link" onclick="goTo(0), collapse_nav()">Home</a>
 
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" data-location="About">
-                                    <a class="nav-link" onclick="goTo(1)">Acerca</a>
+                                    <a class="nav-link" onclick="goTo(1), collapse_nav()">Acerca</a>
 
                                 </li>
 
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" data-location="Timeline">
-                                    <a class="nav-link" onclick="goTo(2)">Titulos</a>
+                                    <a class="nav-link" onclick="goTo(2), collapse_nav()">Titulos</a>
 
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" data-location="Contact">
-                                    <a class="nav-link" onclick="goTo(3)">Contact</a>
+                                    <a class="nav-link" onclick="goTo(3), collapse_nav()">Contact</a>
 
                                 </li>
 

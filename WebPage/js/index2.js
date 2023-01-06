@@ -284,50 +284,50 @@ function calculateCurrentPoint(position) {
 
         if ((position) < currentDotPosition) {
             /* TOP */
-           
+
             currentText[0].classList.add('slide-out-bottom-1')        /* sale el texto de ahora*/
-    
+
             setTimeout(() => {
                 currentText[0].classList.add('hidden-display')      /* desaparece el texto de ahora  */
-    
+
             }, 500);
-    
+
             setTimeout(() => {
                 newText[0].classList.remove('hidden-display')       /*aparece el nuevo texto */
                 newText[0].classList.add('slide-in-top-1')            /*entra el nuevo texto */
-    
+
             }, 500);
-    
+
             /*WE DELETE THE STYLES*/
             setTimeout(() => {
-                currentText[0].classList.remove('slide-out-bottom-1')    
+                currentText[0].classList.remove('slide-out-bottom-1')
                 newText[0].classList.remove('slide-in-top-1')
-    
+
             }, 2000);
-    
+
         }
         else {
 
             /* BOTTOM */
 
             currentText[0].classList.add('slide-out-top-1')        /* sale el texto de ahora*/
-    
+
             setTimeout(() => {
                 currentText[0].classList.add('hidden-display')      /* desaparece el texto de ahora  */
-    
+
             }, 500);
-    
+
             setTimeout(() => {
                 newText[0].classList.remove('hidden-display')       /*aparece el nuevo texto */
                 newText[0].classList.add('slide-in-bottom-1')            /*entra el nuevo texto */
-    
+
             }, 500);
-    
+
             /*WE DELETE THE STYLES*/
             setTimeout(() => {
-                currentText[0].classList.remove('slide-out-top-1')    
+                currentText[0].classList.remove('slide-out-top-1')
                 newText[0].classList.remove('slide-in-bottom-1')
-    
+
             }, 2000);
         }
 
@@ -336,56 +336,56 @@ function calculateCurrentPoint(position) {
 
         if ((position) > currentDotPosition) {
             /* right */
-    
+
             currentText[0].classList.add('slide-out-left')
-    
+
             setTimeout(() => {
                 currentText[0].classList.add('hidden-display')
-    
+
             }, 500);
-    
+
             setTimeout(() => {
                 newText[0].classList.remove('hidden-display')
                 newText[0].classList.add('slide-in-right')
-    
+
             }, 500);
-    
+
             /*WE DELETE THE STYLES*/
             setTimeout(() => {
                 currentText[0].classList.remove('slide-out-left')
                 newText[0].classList.remove('slide-in-right')
-    
+
             }, 2000);
-    
+
         }
         else {
             /* left */
-    
+
             currentText[0].classList.add('slide-out-right')
-    
+
             setTimeout(() => {
                 currentText[0].classList.add('hidden-display')
-    
+
             }, 500);
-    
+
             setTimeout(() => {
                 newText[0].classList.remove('hidden-display')
                 newText[0].classList.add('slide-in-left')
-    
+
             }, 500);
-    
+
             /*WE DELETE THE STYLES*/
             setTimeout(() => {
                 currentText[0].classList.remove('slide-out-right')
                 newText[0].classList.remove('slide-in-left')
-    
+
             }, 2000);
         }
 
     }
 
 
-    
+
 
 
     currentDotPosition = position       /*UPDATE THE DOT POSITION*/
@@ -410,6 +410,16 @@ function copyLink() {
 
 }
 
+/* COLLAPSE NAV ON CLICK*/
+function collapse_nav(){
+
+    var nav = document.getElementById('navbarSupportedContent')
+    var navBtn = document.getElementById('navBtn')
+
+    nav.classList.remove('show')
+    navBtn.setAttribute("aria-expanded","false")
+    console.log(navBtn)
+}
 /* TYPEWRITING 
 var i = 0;
 var txt = 'ENDIKA';  The text 
