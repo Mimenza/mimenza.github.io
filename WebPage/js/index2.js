@@ -418,7 +418,6 @@ function collapse_nav(){
 
     nav.classList.remove('show')
     navBtn.setAttribute("aria-expanded","false")
-    console.log(navBtn)
 }
 /* TYPEWRITING 
 var i = 0;
