@@ -385,9 +385,6 @@ function calculateCurrentPoint(position) {
     }
 
 
-
-
-
     currentDotPosition = position       /*UPDATE THE DOT POSITION*/
 }
 
@@ -419,6 +416,8 @@ function collapse_nav(){
     nav.classList.remove('show')
     navBtn.setAttribute("aria-expanded","false")
 }
+
+
 /* TYPEWRITING 
 var i = 0;
 var txt = 'ENDIKA';  The text 
