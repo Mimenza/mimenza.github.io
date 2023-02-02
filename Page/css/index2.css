@@ -1345,7 +1345,6 @@ footer {
 
     .timeline-text {
         height: 330px;
-        max-height: 1000px;
         padding: 20px;
     }
 
@@ -1499,7 +1498,6 @@ footer {
         max-width: 1200px;
         margin: 0 auto;
         height: auto;
-        /* max-height: 100%; */
         background-color: var(--color1);
         box-shadow: none;
         padding: 0;
