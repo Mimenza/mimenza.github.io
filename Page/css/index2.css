@@ -1424,11 +1424,13 @@ footer {
         visibility: hidden;
     }
 
-    
+
     .contact {
-        height:120vh;
+        height: 120vh;
     }
-    .timeline, .about{
+
+    .timeline,
+    .about {
         height: auto;
     }
 
@@ -1441,45 +1443,49 @@ footer {
         left: 48%
     }
 
-    
-    .timeline .line{
+
+    .timeline .line {
         display: none;
     }
 
-    .timeline-column-2{
+    .timeline-column-2 {
         max-width: 100%;
-        float:none ;
+        float: none;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
-    .hidden-display{
+    .hidden-display {
         display: block;
     }
 
-    .content{
-    background-color: var(--color2);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
-    padding: 15px;
+    .content {
+        background-color: var(--color2);
+        border-radius: 10px;
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+        padding: 15px;
     }
 
-    .timeline-tittle{
+    .timeline-tittle {
         padding-left: 40px;
         padding-right: 40px;
     }
-    .timeline{
+
+    .timeline {
         padding-left: 0;
         padding-right: 0;
     }
 
-    
-/*-------------------------*/
+
+    /*-------------------------*/
 
     /* Place the timelime to the left */
     .timeline-text::after {
         left: 31px;
         content: '';
         position: absolute;
-        width: 6px;        
+        width: 6px;
         top: 0;
         bottom: 0;
         margin-left: -3px;
@@ -1499,7 +1505,7 @@ footer {
         padding: 0;
     }
 
-    /* Make sure that all arrows are pointing leftwards*/ 
+    /* Make sure that all arrows are pointing leftwards*/
     .timeline-text .container::before {
         left: 60px;
         border: medium solid var(--color2);
@@ -1539,12 +1545,12 @@ footer {
         padding-right: 25px;
     }
 
-      /* The actual content */
+    /* The actual content */
     .content {
-            
+
         position: relative;
         border-radius: 6px;
-    } 
+    }
 
 }
 
