@@ -22,7 +22,7 @@
 
 
 var access;
-var grantAccess = true  //true=redirects to index / false= have to write the pass and user
+var grantAccess = false  //true=redirects to index / false= have to write the pass and user
 
 if(grantAccess == true){
         window.location.href = "Page/html/home.html"         
