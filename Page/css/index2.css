@@ -1401,6 +1401,9 @@ footer {
     .about {
         height: auto;
     }
+    .timeline-column-2{
+        height: auto;
+    }
     .about-me h5 {
         margin-bottom: 40px;
         padding-left: 20px;
@@ -1496,7 +1499,7 @@ footer {
         max-width: 1200px;
         margin: 0 auto;
         height: auto;
-        max-height: 100%;
+        /* max-height: 100%; */
         background-color: var(--color1);
         box-shadow: none;
         padding: 0;
@@ -1509,7 +1512,7 @@ footer {
         border-width: 10px 10px 10px 0;
         border-color: transparent var(--color2) transparent transparent;
         content: " ";
-        height: 0;
+        height: 0; 
         position: absolute;
         top: 22px;
         width: 0;
@@ -1544,7 +1547,6 @@ footer {
 
     /* The actual content */
     .content {
-
         position: relative;
         border-radius: 6px;
     }
