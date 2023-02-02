@@ -1448,6 +1448,7 @@ footer {
     .timeline-column-2 {
         max-width: 100%;
         float: none;
+        height: auto;
     }
 
     .hidden-display {
