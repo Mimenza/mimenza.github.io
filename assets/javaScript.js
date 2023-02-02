@@ -22,7 +22,14 @@
 
 
 var access;
+var grantAccess = true  //true=redirects to index / false= have to write the pass and user
 
+if(grantAccess == true){
+        window.location.href = "Page/html/home.html"         
+        access = 1
+        sessionStorage.setItem('accessKey', access)
+    
+    }
 
 var cipher_name = [ 97, 100, 109, 105, 110 ]
 var cipher_pass = [101,110,100,105,107,97,109,105,109,101,110,122,97,108,111,98,97,116,111]
@@ -43,13 +50,13 @@ function checkUserPass( user, pass){
 
     access = 0
 
-    if(JSON.stringify(cipher_pass) === JSON.stringify(splitPass) && JSON.stringify(cipher_name) === JSON.stringify(splitName)){
+    if((JSON.stringify(cipher_pass) === JSON.stringify(splitPass) && JSON.stringify(cipher_name) === JSON.stringify(splitName))&& grantAccess == false ){
   
         access = 1
         sessionStorage.setItem('accessKey', access)
 
-         window.location.href = "WebPage/html/indexRework.html" 
-        
+         window.location.href = "Page/html/home.html" 
+     
     }else{
         alert('ERROR')        
     }
