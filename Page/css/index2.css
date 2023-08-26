@@ -1041,6 +1041,15 @@ h1 span {
 
 }
 
+.timeline .timeline-column-2 span
+{
+    color: var(--accent);
+}
+
+.timeline .timeline-column-2 span
+{
+    cursor: pointer;
+}
 
 /*----------------------------------- LINE TIMELINE -----------------------------------*/
 

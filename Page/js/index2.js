@@ -138,12 +138,18 @@ function moveSlide(direction) {
 
 /*CHANGE DIV FOCUS */
 function goTo(location) {
-
+    if(location == 4)
+    {
+        window.open("https://www.42urduliz.com/"); 
+    }
+    else
+    {
     currentPosition = location
     document.getElementById(position[currentPosition]).scrollIntoView();
 
     changeNavFocus()
     changeDotFocus()
+    }
 }
 
 /*CHANGE TOP NAV FOCUS */
