@@ -68,25 +68,40 @@ if (access == 1) {
 
 })(jQuery);
 
+fetch(`../lan-${document.documentElement.lang}.json`)
+  .then(response => response.json())
+  .then(data => {
+    Object.keys(data).forEach(key => {
+      const element = document.getElementById(key);
+      if (element) {
+        element.innerHTML = data[key];
+      }
+    });
+  })
+  .catch(error => console.error('Error changing the language', error));
 
-/*BOUNCING LETTERS LISTENER*/
-document.querySelectorAll(".bouncing-letters>span").forEach((element) => {
-    element.addEventListener("mouseover", (e) => bounce(e.target));
+  document.addEventListener("DOMContentLoaded", function () {
+    /* BOUNCING LETTERS LISTENER */
+    document.querySelectorAll(".bouncing-letters>span").forEach((element) => {
+        element.addEventListener("mouseover", (e) => {
+            e.target.classList.add("bounce");
+        });
+    });
+
+    /* BOUNCE ANIMATION */
+    function bounce(letter) {
+        if (!letter.classList.contains("bounce")) {
+            letter.classList.add("bounce");
+            setTimeout(
+                function () {
+                    letter.classList.remove("bounce");
+                },
+                1000
+            );
+        }
+    }
 });
 
-/*BOUNCE ANIMATION */
-function bounce(letter) {
-    if (!letter.classList.contains("bounce")) {
-        letter.classList.add("bounce");
-        setTimeout(
-            function () {
-                letter.classList.remove("bounce");
-            },
-            1000
-        );
-    }
-
-}
 var cooldown = false                /*SCROLL COOLDOWN*/
 
 var widthFunction                   /* JS WIDH FUNCTION VARIABLE*/
@@ -422,21 +437,3 @@ function collapse_nav(){
     nav.classList.remove('show')
     navBtn.setAttribute("aria-expanded","false")
 }
-
-
-/* TYPEWRITING 
-var i = 0;
-var txt = 'ENDIKA';  The text 
-var speed = 50; The speed/duration of the effect in milliseconds 
-function typeWriter() {
-    console.log(i , txt.length-1)
-
-    if (i < txt.length) {
-        document.getElementById("NameId").innerHTML += '<span>' + txt.charAt(i) + '</span>';
-        i++;
-
-        setTimeout(typeWriter, speed);
-    }
-    
-
-}*/

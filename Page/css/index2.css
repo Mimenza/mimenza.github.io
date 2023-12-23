@@ -40,11 +40,17 @@ html {
     --accent: #f44c7f;
     --color1: #333a45;
     --color2: #333a45;
-    ;
     --letter1: #939eae;
     --letter2: #ffffff;
 }
 
+:root.blue {
+    --accent: #96C9DC;
+    --color1: #333a45;
+    --color2: #021927;
+    --letter1: #939eae;
+    --letter2: #ffffff;
+}
 
 /* #Navigation
 ================================================== */

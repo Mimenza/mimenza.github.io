@@ -1,4 +1,4 @@
-<html lang="en" class="purple">
+<html lang="es" class="purple">
 
 <head>
     <meta charset="UTF-8">
@@ -38,20 +38,20 @@
                             <ul class="navbar-nav ml-auto py-4 py-md-0">
 
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active" data-location="Top">
-                                    <a class="nav-link" onclick="goTo(0), collapse_nav()">Home</a>
+                                    <a id="nav_home"class="nav-link" onclick="goTo(0), collapse_nav()"></a>
 
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" data-location="About">
-                                    <a class="nav-link" onclick="goTo(1), collapse_nav()">Acerca</a>
+                                    <a id="nav_about"class="nav-link" onclick="goTo(1), collapse_nav()"></a>
 
                                 </li>
 
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" data-location="Timeline">
-                                    <a class="nav-link" onclick="goTo(2), collapse_nav()">Certificados</a>
+                                    <a id="nav_timeline"class="nav-link" onclick="goTo(2), collapse_nav()"></a>
 
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" data-location="Contact">
-                                    <a class="nav-link" onclick="goTo(3), collapse_nav()">Contact</a>
+                                    <a id="nav_contact"class="nav-link" onclick="goTo(3), collapse_nav()"></a>
 
                                 </li>
 
@@ -105,13 +105,10 @@
         <div id="Presentation" class="presentation text-center text-focus-in">
             <img onclick="clearStorage()" src="../photos/mePhoto.png" alt="">
             <h1 class="bouncing-letters" id="NameId" class="namePresentation">
-                Hola mi nombre es
-                <br class="breakName">
-                <span>E</span><span>N</span><span>D</span><span>I</span><span>K</span><span>A</span>
             </h1>
-            <h4>Soy un desarrollador y programador web y multiplataforma!</h4>
+            <h4 id="pre_desc"></h4>
 
-            <button type="button" class="btn btn-dark heartbeat" onclick="goTo(1)">Quieres saber mas? </button>
+            <button id="pre_btn" type="button" class="btn btn-dark heartbeat" onclick="goTo(1)"></button>
 
             <div class="field ">
                 <div class="mouse"></div>
@@ -123,44 +120,26 @@
         <div id="About" class="about">
             <div id="About-me" class="about-me">
 
-                <h1 class="bouncing-letters"> <span>S</span><span>O</span><span>B</span><span>R</span><span>E</span>
-                    <span>M</span><span>I</span>
-                </h1>
+                <h1 id="abt_bounce" class="bouncing-letters"></h1>
 
-                <h5>Aqui encontraras informacion sobre mi al igual que algunas skill que he adquirido a lo largo de
-                    los
-                    años.</h5>
+                <h5 id="abt_info"></h5>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-info ">
 
-                            <h3>Conoceme</h3>
-                            <p>
-                                Hola! Soy Endika Mimenza, un desarrollador y programador que vive a las afueras de
-                                Bilbao, Euskadi, España.
-                            </p>
-                            <p>
-                                Estoy graduado como desarrollador de aplicaciones web al igual que en aplicacciones
-                                multiplataforma. He trabajado con todo tipo de lenguajes y proyectos al igual que
-                                entornos, desde
-                                html/css, java, kotlin y Php, al igual que en entornos de Drupal, diseño web y con
-                                administradores de empresas como CRM-ERP.
-                            </p>
-                            <p> En mis ratos libres me encanta estar con mis amigos, ver peliculas y dedicarle
-                                tiempo a mis hobbies y proyectos.
-                            </p>
-                            <p>
-                                Estoy abierto a nuevas oportunidades de trabajo ya sea como Front-End o Back-End, si
-                                crees que puedo encajar en tu proyecto no dudes en contactarme!
-                            </p>
+                            <h3 id="abt_knowme1"></h3>
+                            <p id="abt_knowme2"></p>
+                            <p id="abt_knowme3"></p>
+                            <p id="abt_knowme4"></p>
+                            <p id="abt_knowme5"></p>
 
-                            <button type="button" class="btn btn-dark" onclick="goTo(3)"><a>Contacto</a> </button>
+                            <button id="abt_btn" type="button" class="btn btn-dark" onclick="goTo(3)"></button>
 
                         </div>
 
                         <div class="col-md-6 col-skills">
 
-                            <h3>Conocimientos</h3>
+                            <h3 id="abt_knowledge"></h3>
 
                             <span>Java</span>
                             <span>Php</span>
@@ -189,13 +168,11 @@
         <div id="Timeline" class="timeline">
 
             <div class="timeline-tittle">
-                <h1 class="bouncing-letters">
-                    <span>C</span><span>e</span><span>r</span><span>t</span><span>i</span><span>f</span><span>i</span><span>c</span><span>a</span><span>d</span><span>o</span><span>s</span>
+                <h1 id="time_bounce" class="bouncing-letters">
+                    
                 </h1>
 
-                <h3 class="text-center">Aqui encontraras diferentes titulos e idiomas que he ido adquiriendo durante
-                    los
-                    años.</h3>
+                <h3 id="time_info" class="text-center"></h3>
             </div>
 
             <div class="timeline-column-1">
@@ -258,10 +235,10 @@
                     </div>
 
                     <div class="wrap-timeline">
-                        <h5 class="timeline-dot-top hidden" data-timelineDotTop="dateTop9">Ahora que?</h5>
+                        <h5 id="wrap_now1" class="timeline-dot-top hidden" data-timelineDotTop="dateTop9"></h5>
                         <span id="Dot-timeline9" class="dot-timeline" onmouseover="dotHover(9, event)"
                             onmouseleave="dotHoverLeave(9)" onclick="dotClick(9, event)"></span>
-                        <h6 class="timeline-dot-bottom hidden" data-timelineDotBottom="dateBottom9">Ahora que?</h6>
+                        <h6 id="wrap_now2" class="timeline-dot-bottom hidden" data-timelineDotBottom="dateBottom9"></h6>
                     </div>
 
                 </div>
@@ -274,32 +251,29 @@
 
                     <div class="text-1 container">
                         <div class="content">
-                            <h4 class="centre-text">Titulo B2 Euskera</h4>
-                            <p>En mayo de 2019 conseguí el Título de B2 de Euskera que certifica el nivel en euskera
-                                hablado como escrito.</p>
+                            <h4 id="time_txt1_title" class="centre-text"></h4>
+                            <p id="time_txt1_desc"></p>
                         </div>
                     </div>
 
                     <div class="text-2 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Bachiller y Selectividad</h4>
-                            <p>En junio de 2019 aprobé Bachiller Científico al igual que Selectividad.</p>
+                            <h4 id="time_txt2_title" class="centre-text"></h4>
+                            <p id="time_txt2_desc"></p>
                         </div>
                     </div>
 
                     <div class="text-3 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Grado Superior Desarrollo Aplicaciones Web</h4>
-                            <p>En marzo de 2021 terminé el Grado superior con 2 años de duración en el que aprendí a
-                                diseñar páginas web con CSS, HTML, JS, angular, PHP y SQL entre muchas otras.
-                                Al igual que use programas como Visual Studio Code, phpMyAdmin, XAMPP y otro más.</p>
+                            <h4 id="time_txt3_title" class="centre-text"></h4>
+                            <p id="time_txt3_desc"></p>
                         </div>
                     </div>
 
                     <div class="text-4 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Practicas como programador en Serinfor</h4>
-                            <p>En junio de 2021 terminé las Prácticas de 3 meses en la empresa Serinfor en la que tenía
+                            <h4 id="time_txt4_title" class="centre-text">Practicas como programador en Serinfor</h4>
+                            <p id="time_txt4_desc">En junio de 2021 terminé las Prácticas de 3 meses en la empresa Serinfor en la que tenía
                                 que:
                                 <br>
                                 -Crear y modificar objetos BBDD mediante sql
@@ -313,25 +287,22 @@
 
                     <div class="text-5 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Titulo B2 Ingles</h4>
-                            <p>En julio de 2021 me presenté y conseguí el Título First de inglés que certifica el nivel
-                                de inglés hablado, escrito, leído y con una Puntuación de 168.</p>
+                            <h4 id="time_txt5_title" class="centre-text"></h4>
+                            <p id="time_txt5_desc"></p>
                         </div>
                     </div>
 
                     <div class="text-6 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Grado Superior Desarrollo Aplicaciones Multiplataforma</h4>
-                            <p>En marzo de 2022, terminé mi segundo grado superior con una duración de 1 año en el que
-                                aprendí a programar y desarrollar aplicaciones y programas para dispositivos móviles
-                                Android, usando Kotlin y XML.</p>
+                            <h4 id="time_txt6_title" class="centre-text"></h4>
+                            <p id="time_txt6_desc"></p>
                         </div>
                     </div>
 
                     <div class="text-7 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Practicas como programador en Bilbomatica</h4>
-                            <p>En junio de 2022 finalizo las prácticas con una duración de 3 meses en la empresa
+                            <h4 id="time_txt7_title" class="centre-text">Practicas como programador en Bilbomatica</h4>
+                            <p id="time_txt7_desc">En junio de 2022 finalizo las prácticas con una duración de 3 meses en la empresa
                                 Bilbomatica
                                 en la que mi labor era:
                                 <br>
@@ -347,16 +318,15 @@
 
                     <div class="text-8 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Titulo C1 Ingles</h4>
-                            <p>En julio de 2023 me presenté y conseguí el Título Advanced de inglés que certifica el nivel
-                                de inglés hablado, escrito, leído y con una Puntuación de 186.</p>
+                            <h4 id="time_txt8_title" class="centre-text"></h4>
+                            <p id="time_txt8_desc"></p>
                         </div>
                     </div>
 
                     <div class="text-9 hidden-display container">
                         <div class="content">
-                            <h4 class="centre-text">Hoy en dia </h4>
-                            <p>Actualmente soy estudiante del campus <span onclick="goTo(4)" >42 Urduliz</span>, en el cual inicie mis estudios despues de pasar la piscina de Julio y en el que programo y estudio C y shell.</p>
+                            <h4 id="time_txt9_title" class="centre-text"></h4>
+                            <p id="time_txt9_desc"></p>
                         </div>
                     </div>
 
@@ -369,11 +339,10 @@
 
         <div id="Contact" class="contact">
             <div class="contact-msg text-center">
-                <h1 class="bouncing-letters">
-                    <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span><span>O</span>
+                <h1 id="contact_bounce" class="bouncing-letters">
+        
                 </h1>
-                <h5>Si crees que cumplo los requisitos y/o podría unirme a tu platilla/empresa o quieres ampliar la
-                    información no dudes en ponerte en contacto conmigo en cualquiera de las redes de abajo!</h5>
+                <h5 id="contact_info"></h5>
             </div>
 
             <div class="social-container">
